@@ -1,5 +1,6 @@
 ﻿namespace eBookStoreWebAPI.Controllers;
 
+using BusinessObject;
 using DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
@@ -10,13 +11,13 @@ public class BooksController : ODataController
     private readonly BookRepository _bookRepository = new BookRepository();
     
     [EnableQuery(PageSize = 1)]
-    public IActionResult Get()
+    public ActionResult<IEnumerable<Book>> Get()
     {
         return this.Ok(this._bookRepository.GetAll());
     }
     
     [EnableQuery]
-    public IActionResult Get(int key)
+    public ActionResult<Book> Get(int key)
     {
         return this.Ok(this._bookRepository.Get(key));
     }

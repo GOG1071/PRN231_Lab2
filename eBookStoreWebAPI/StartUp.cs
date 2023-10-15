@@ -22,7 +22,7 @@ public class StartUp
         {
             opt.Select().Filter().Count().OrderBy().OrderBy().Expand().SetMaxTop(100)
                 .AddRouteComponents("odata", GetEdmModel());
-            opt.RouteOptions.EnableActionNameCaseInsensitive = false;
+            opt.RouteOptions.EnableControllerNameCaseInsensitive = true;
         });
     }
 

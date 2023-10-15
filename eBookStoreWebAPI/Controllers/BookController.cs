@@ -4,19 +4,19 @@ using BusinessObject;
 using DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class BookController : ControllerBase
 {
     private readonly BookRepository _bookRepository = new BookRepository();
     
     [HttpGet]
-    public ActionResult<IEnumerable<Book>> GetBooks()
+    public ActionResult<IEnumerable<Book>> GetAll()
     {
         return this._bookRepository.GetAll();
     }
     
     [HttpGet("{id}")]
-    public ActionResult<Book> GetBookById(int id)
+    public ActionResult<Book> Get(int id)
     {
         var book = this._bookRepository.Get(id);
         if (book == null)
@@ -27,7 +27,7 @@ public class BookController : ControllerBase
     }
     
     [HttpPut]
-    public ActionResult<Book> UpdateBook(Book book)
+    public ActionResult<Book> Update(Book book)
     {
         var aut = this._bookRepository.Get(book.BookId);
         if (aut == null)
@@ -39,7 +39,7 @@ public class BookController : ControllerBase
     }
     
     [HttpPost]
-    public ActionResult<Book> AddBook(Book book)
+    public ActionResult<Book> Add(Book book)
     {
         var aut = this._bookRepository.Get(book.BookId);
         if (aut != null)
@@ -51,7 +51,7 @@ public class BookController : ControllerBase
     }
     
     [HttpDelete("{id}")]
-    public ActionResult<Book> DeleteBook(int id)
+    public ActionResult<Book> Delete(int id)
     {
         var aut = this._bookRepository.Get(id);
         if (aut == null)

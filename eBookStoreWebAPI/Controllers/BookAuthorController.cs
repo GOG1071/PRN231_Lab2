@@ -4,7 +4,7 @@ using BusinessObject;
 using DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class BookAuthorController : ControllerBase
 {
     private readonly BookAuthorRepository _bookAuthorRepository = new BookAuthorRepository();

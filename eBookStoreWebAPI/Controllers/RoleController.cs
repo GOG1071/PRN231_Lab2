@@ -5,7 +5,7 @@ using DataAccess.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("api/[controller]/[action]")]
 public class RoleController : ControllerBase
 {
     private readonly RoleRepository _roleRepository = new RoleRepository();
