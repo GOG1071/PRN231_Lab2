@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BusinessObject.Author>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Index</h1>
+
+<p><a asp-action="Create">Create new</a></p>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(Model => item.FirstName)</td>
+            <td>@Html.DisplayFor(Model => item.Phone)</td>
+            <td>@Html.DisplayFor(Model => item.EmailAddress)</td>
+            <td>@Html.DisplayFor(Model => item.Address)</td>
+            <td>
+                <a asp-controller="Author" asp-action="Detail" asp-route-id="@item.Id">Detail</a>|
+                <a asp-controller="Author" asp-action="Edit" asp-route-id="@item.Id">Edit</a>|
+                <a asp-controller="Author" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

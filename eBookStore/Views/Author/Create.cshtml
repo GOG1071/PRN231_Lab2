@@ -1,0 +1,49 @@
+﻿@using BusinessObject
+@model Author
+@{
+    ViewBag.Title = "Create Author";
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post">
+    <div class="border">
+        <div class="mb-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Phone"></label>
+            <input asp-for="Phone" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="EmailAddress"></label>
+            <input asp-for="EmailAddress" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Address"></label>
+            <input asp-for="Address" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="State"></label>
+            <input asp-for="State" class="form-control"/>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Zip"></label>
+            <input asp-for="Zip" class="form-control"/>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    <a asp-action="Index">Back to List</a>
+</form>

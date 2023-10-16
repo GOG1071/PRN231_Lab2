@@ -2,7 +2,7 @@
 
 using BusinessObject;
 using DataAccess.DAO;
-using DataAccess.Repository.Interface;
+using DataAccess.Repository.Base;
 
 public class RoleRepository : Repository<Role, RoleDAO>
 {

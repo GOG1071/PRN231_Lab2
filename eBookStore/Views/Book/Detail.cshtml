@@ -1,0 +1,53 @@
+﻿@using BusinessObject
+@model Book
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="border">
+     <div class="mb-3">
+            <label asp-for="Id"></label>
+            <input disabled asp-for="Id" class="form-control" value="@Model.Id"/>
+        </div>
+    <div class="mb-3">
+        <label asp-for="Title"></label>
+        <input disabled asp-for="Title" class="form-control" value="@Model.Title"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Type"></label>
+        <input disabled asp-for="Type" class="form-control" value="@Model.Type"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Price"></label>
+        <input disabled asp-for="Price" class="form-control" value="@Model.Price"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PublishedDate"></label>
+        <input disabled asp-for="PublishedDate" class="form-control" value="@Model.PublishedDate"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="PublisherId"></label>
+        <input disabled asp-for="PublisherId" class="form-control" value="@Model.PublisherId"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Advance"></label>
+        <input disabled asp-for="Advance" class="form-control" value="@Model.Advance"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Royalty"></label>
+        <input disabled asp-for="Royalty" class="form-control" value="@Model.Royalty"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="YtdSales"></label>
+        <input disabled asp-for="YtdSales" class="form-control" value="@Model.YtdSales"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Notes"></label>
+        <input disabled asp-for="Notes" class="form-control" value="@Model.Notes"/>
+    </div>
+
+    <a asp-action="Index">Back to List</a>
+</div>

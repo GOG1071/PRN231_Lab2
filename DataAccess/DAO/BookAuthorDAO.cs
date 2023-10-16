@@ -9,7 +9,7 @@ public static class BookAuthorDAO
         try
         {
             using var context = new EBookStoreDbContext();
-            return context.Set<BookAuthor>().First(x => x.AuthorId == Aid && x.BookId == Bid);
+            return context.Set<BookAuthor>().FirstOrDefault(x => x.AuthorId == Aid && x.BookId == Bid);
         }
         catch (Exception e)
         {
@@ -18,7 +18,7 @@ public static class BookAuthorDAO
         }
     }
 
-    public static IEnumerable<BookAuthor> GetAll()
+    public static List<BookAuthor> GetAll()
     {
         try
         {

@@ -1,0 +1,50 @@
+﻿@using BusinessObject
+@model Author
+@{
+    ViewBag.Title = Model.FirstName + " " + Model.LastName;
+    Layout = "_Layout";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="border">
+     <div class="mb-3">
+            <label asp-for="Id"></label>
+            <input disabled asp-for="Id" class="form-control" value="@Model.Id"/>
+        </div>
+    <div class="mb-3">
+        <label asp-for="FirstName"></label>
+        <input disabled asp-for="FirstName" class="form-control" value="@Model.FirstName"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName"></label>
+        <input disabled asp-for="LastName" class="form-control" value="@Model.LastName"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone"></label>
+        <input disabled asp-for="Phone" class="form-control" value="@Model.Phone"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EmailAddress"></label>
+        <input disabled asp-for="EmailAddress" class="form-control" value="@Model.EmailAddress"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Address"></label>
+        <input disabled asp-for="Address" class="form-control" value="@Model.Address"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="City"></label>
+        <input disabled asp-for="City" class="form-control" value="@Model.City"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="State"></label>
+        <input disabled asp-for="State" class="form-control" value="@Model.State"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Zip"></label>
+        <input disabled asp-for="Zip" class="form-control" value="@Model.Zip"/>
+    </div>
+    
+
+    <a asp-action="Index">Back to List</a>
+</div>

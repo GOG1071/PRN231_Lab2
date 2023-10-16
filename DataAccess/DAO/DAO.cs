@@ -74,6 +74,7 @@ public abstract class DAO<T> : IDAO<T> where T : class, IModel
         try
         {
             using var context = new EBookStoreDbContext();
+            t.Id = 0;
             context.Set<T>().Add(t);
             context.SaveChanges();
         }

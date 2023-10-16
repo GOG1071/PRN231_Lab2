@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj": {}
+    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\obj\\",
+        "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +103,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -134,21 +134,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj": {
+    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj",
         "projectName": "eBookStoreWebAPI",
-        "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj",
-        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStoreWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStoreWebAPI\\eBookStoreWebAPI.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStoreWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,8 +162,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -210,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

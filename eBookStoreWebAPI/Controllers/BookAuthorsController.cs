@@ -6,43 +6,74 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 
-public class BookAuthorAuthorsController : ODataController
+public class BookAuthorsController : ODataController
 {
     private readonly BookAuthorRepository _bookAuthorRepository = new();
-    [EnableQuery] public ActionResult<IEnumerable<BookAuthor>> Get()
+    [EnableQuery][HttpGet("odata/BookAuthors/GetAll")] public ActionResult<IEnumerable<BookAuthor>> Get()
     {
         return this.Ok(this._bookAuthorRepository.GetAll());
     }
 
-    [EnableQuery] public ActionResult<BookAuthor> Get(int Aid, int Bid) { return this.Ok(this._bookAuthorRepository.Get(Aid,Bid)); }
-
-    [EnableQuery] public IActionResult Post([FromBody] BookAuthor bookAuth)
+    [EnableQuery][HttpGet("odata/BookAuthors/Get({Aid}&{Bid})")] public ActionResult Get(int Aid, int Bid)
     {
-        this._bookAuthorRepository.Add(bookAuth);
-        return this.Created(bookAuth);
+        try
+        {
+            return this.Ok(this._bookAuthorRepository.Get(Aid, Bid));
+        }
+        catch (Exception e)
+        {
+            return this.BadRequest();
+        }
     }
 
-    [EnableQuery] public IActionResult Put(int Aid, int Bid, [FromBody] BookAuthor bookAuth)
+    [EnableQuery] public ActionResult Post([FromBody] BookAuthor bookAuth)
     {
-        var bk = this._bookAuthorRepository.Get(Aid,Bid);
-        if (bk == null)
+        try
         {
-            return this.NotFound();
+            this._bookAuthorRepository.Add(bookAuth);
+            return this.Created(bookAuth);
         }
-
-        this._bookAuthorRepository.Update(bookAuth);
-        return this.Updated(bookAuth);
+        catch (Exception e)
+        {
+            return this.BadRequest();
+        }
     }
 
-    [EnableQuery] public IActionResult Delete([FromBody] int Aid, int Bid)
+    [EnableQuery] public ActionResult Put(int Aid, int Bid, [FromBody] BookAuthor bookAuth)
     {
-        var bk = this._bookAuthorRepository.Get(Aid,Bid);
-        if (bk == null)
+        try
         {
-            return this.NotFound();
-        }
+            var bk = this._bookAuthorRepository.Get(Aid, Bid);
+            if (bk == null)
+            {
+                return this.NotFound();
+            }
 
-        this._bookAuthorRepository.Delete(Aid,Bid);
-        return this.Ok();
+            this._bookAuthorRepository.Update(bookAuth);
+            return this.Updated(bookAuth);
+        }
+        catch (Exception e)
+        {
+            return this.BadRequest();
+        }
+    }
+
+    [EnableQuery] public ActionResult Delete(int Aid, int Bid)
+    {
+        try
+        {
+            var bk = this._bookAuthorRepository.Get(Aid, Bid);
+            if (bk == null)
+            {
+                return this.NotFound();
+            }
+
+            this._bookAuthorRepository.Delete(Aid, Bid);
+            return this.Ok();
+        }
+        catch (Exception e)
+        {
+            return this.BadRequest();
+        }
     }
 }

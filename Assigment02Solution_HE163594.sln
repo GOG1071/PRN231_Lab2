@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessObject", "BusinessO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBookStoreWebAPI", "eBookStoreWebAPI\eBookStoreWebAPI.csproj", "{E07215B7-5BEF-4E22-AF22-4C4679F34E68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBookStore", "eBookStore\eBookStore.csproj", "{F53E8D30-9104-4E1B-8A7E-7A77608460C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eBookStore", "eBookStore\eBookStore.csproj", "{44078B1C-F2DE-42DD-9CF1-3FBC6ECDD6A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +26,9 @@ Global
 		{E07215B7-5BEF-4E22-AF22-4C4679F34E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E07215B7-5BEF-4E22-AF22-4C4679F34E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E07215B7-5BEF-4E22-AF22-4C4679F34E68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F53E8D30-9104-4E1B-8A7E-7A77608460C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F53E8D30-9104-4E1B-8A7E-7A77608460C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F53E8D30-9104-4E1B-8A7E-7A77608460C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F53E8D30-9104-4E1B-8A7E-7A77608460C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44078B1C-F2DE-42DD-9CF1-3FBC6ECDD6A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44078B1C-F2DE-42DD-9CF1-3FBC6ECDD6A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44078B1C-F2DE-42DD-9CF1-3FBC6ECDD6A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44078B1C-F2DE-42DD-9CF1-3FBC6ECDD6A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
