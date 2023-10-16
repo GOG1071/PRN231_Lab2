@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\obj\\",
+        "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,21 +75,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +103,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

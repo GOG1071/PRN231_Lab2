@@ -30,7 +30,7 @@ public class RoleController : ControllerBase
     [HttpPut]
     public ActionResult<Role> UpdateRole(Role role)
     {
-        var aut = this._roleRepository.Get(role.RoleId);
+        var aut = this._roleRepository.Get(role.Id);
         if (aut == null)
         {
             return NotFound();
@@ -42,7 +42,7 @@ public class RoleController : ControllerBase
     [HttpPost]
     public ActionResult<Role> AddRole(Role role)
     {
-        var aut = this._roleRepository.Get(role.RoleId);
+        var aut = this._roleRepository.Get(role.Id);
         if (aut != null)
         {
             return Conflict();

@@ -29,7 +29,7 @@ public class AuthorController : ControllerBase
     [HttpPut]
     public ActionResult<Author> UpdateAuthor(Author author)
     {
-        var aut = this._authorRepository.Get(author.AuthorId);
+        var aut = this._authorRepository.Get(author.Id);
         if (aut == null)
         {
             return NotFound();
@@ -41,7 +41,7 @@ public class AuthorController : ControllerBase
     [HttpPost]
     public ActionResult<Author> AddAuthor(Author author)
     {
-        var aut = this._authorRepository.Get(author.AuthorId);
+        var aut = this._authorRepository.Get(author.Id);
         if (aut != null)
         {
             return Conflict();

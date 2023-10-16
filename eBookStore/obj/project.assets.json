@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\PC\\.nuget\\packages\\": {}
+    "C:\\Users\\golde\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStore\\eBookStore.csproj",
+      "projectUniqueName": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStore\\eBookStore.csproj",
       "projectName": "eBookStore",
-      "projectPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStore\\eBookStore.csproj",
-      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\RiderProjects\\Assigment02Solution_HE163594\\eBookStore\\obj\\",
+      "projectPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStore\\eBookStore.csproj",
+      "packagesPath": "C:\\Users\\golde\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\golde\\RiderProjects\\PRN231_Lab2\\eBookStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\golde\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

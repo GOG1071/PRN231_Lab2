@@ -14,7 +14,7 @@ public class BookAuthorAuthorsController : ODataController
         return this.Ok(this._bookAuthorRepository.GetAll());
     }
 
-    [EnableQuery] public ActionResult<BookAuthor> Get(int key) { return this.Ok(this._bookAuthorRepository.Get(key)); }
+    [EnableQuery] public ActionResult<BookAuthor> Get(int Aid, int Bid) { return this.Ok(this._bookAuthorRepository.Get(Aid,Bid)); }
 
     [EnableQuery] public IActionResult Post([FromBody] BookAuthor bookAuth)
     {
@@ -22,9 +22,9 @@ public class BookAuthorAuthorsController : ODataController
         return this.Created(bookAuth);
     }
 
-    [EnableQuery] public IActionResult Put(int key, [FromBody] BookAuthor bookAuth)
+    [EnableQuery] public IActionResult Put(int Aid, int Bid, [FromBody] BookAuthor bookAuth)
     {
-        var bk = this._bookAuthorRepository.Get(key);
+        var bk = this._bookAuthorRepository.Get(Aid,Bid);
         if (bk == null)
         {
             return this.NotFound();
@@ -34,15 +34,15 @@ public class BookAuthorAuthorsController : ODataController
         return this.Updated(bookAuth);
     }
 
-    [EnableQuery] public IActionResult Delete([FromBody] int key)
+    [EnableQuery] public IActionResult Delete([FromBody] int Aid, int Bid)
     {
-        var bk = this._bookAuthorRepository.Get(key);
+        var bk = this._bookAuthorRepository.Get(Aid,Bid);
         if (bk == null)
         {
             return this.NotFound();
         }
 
-        this._bookAuthorRepository.Delete(key);
+        this._bookAuthorRepository.Delete(Aid,Bid);
         return this.Ok();
     }
 }

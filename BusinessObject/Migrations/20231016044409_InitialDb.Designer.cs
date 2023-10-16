@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusinessObject.Migrations
 {
     [DbContext(typeof(EBookStoreDbContext))]
-    [Migration("20231015050459_EBookStoreDB")]
-    partial class EBookStoreDB
+    [Migration("20231016044409_InitialDb")]
+    partial class InitialDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,11 +27,11 @@ namespace BusinessObject.Migrations
 
             modelBuilder.Entity("BusinessObject.Author", b =>
                 {
-                    b.Property<int>("AuthorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AuthorId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
@@ -65,14 +65,14 @@ namespace BusinessObject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("AuthorId");
+                    b.HasKey("Id");
 
                     b.ToTable("Authors");
 
                     b.HasData(
                         new
                         {
-                            AuthorId = 1,
+                            Id = 1,
                             Address = "123 Nguyen Trai",
                             City = "HCM",
                             EmailAddress = "abc@email.com",
@@ -84,7 +84,7 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            AuthorId = 2,
+                            Id = 2,
                             Address = "123 Nguyen Trai",
                             City = "HCM",
                             EmailAddress = "acb@email.com",
@@ -98,11 +98,11 @@ namespace BusinessObject.Migrations
 
             modelBuilder.Entity("BusinessObject.Book", b =>
                 {
-                    b.Property<int>("BookId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Advance")
                         .IsRequired()
@@ -135,18 +135,18 @@ namespace BusinessObject.Migrations
                     b.Property<int>("YtdSales")
                         .HasColumnType("int");
 
-                    b.HasKey("BookId");
+                    b.HasKey("Id");
 
                     b.ToTable("Books");
 
                     b.HasData(
                         new
                         {
-                            BookId = 1,
+                            Id = 1,
                             Advance = "256789",
                             Notes = "A",
                             Price = 10000m,
-                            PublishedDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9222),
+                            PublishedDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7255),
                             PublisherId = 1,
                             Royalty = 10m,
                             Title = "Cho Toi Xin Mot Ve Di Tuoi Tho",
@@ -155,11 +155,11 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            BookId = 2,
+                            Id = 2,
                             Advance = "14789",
                             Notes = "B",
                             Price = 123454m,
-                            PublishedDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9225),
+                            PublishedDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7260),
                             PublisherId = 1,
                             Royalty = 10m,
                             Title = "Ngua mat len troi, Han doi vo doi",
@@ -168,11 +168,11 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            BookId = 3,
+                            Id = 3,
                             Advance = "23789",
                             Notes = "C",
                             Price = 10020m,
-                            PublishedDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9226),
+                            PublishedDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7263),
                             PublisherId = 2,
                             Royalty = 10m,
                             Title = "Cho Toi Xin M Tuoi Tho",
@@ -181,11 +181,11 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            BookId = 4,
+                            Id = 4,
                             Advance = "1345679",
                             Notes = "D",
                             Price = 10343m,
-                            PublishedDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9228),
+                            PublishedDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7266),
                             PublisherId = 2,
                             Royalty = 10m,
                             Title = "Ngua mat vo doi",
@@ -194,11 +194,11 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            BookId = 5,
+                            Id = 5,
                             Advance = "5789",
                             Notes = "E",
                             Price = 10000m,
-                            PublishedDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9230),
+                            PublishedDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7270),
                             PublisherId = 1,
                             Royalty = 10m,
                             Title = "Cho Toi Xin Tuoi Tho",
@@ -266,11 +266,11 @@ namespace BusinessObject.Migrations
 
             modelBuilder.Entity("BusinessObject.Publisher", b =>
                 {
-                    b.Property<int>("PublisherId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PublisherId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
                         .IsRequired()
@@ -288,14 +288,14 @@ namespace BusinessObject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PublisherId");
+                    b.HasKey("Id");
 
                     b.ToTable("Publishers");
 
                     b.HasData(
                         new
                         {
-                            PublisherId = 1,
+                            Id = 1,
                             City = "HCM",
                             Country = "VN",
                             PublisherName = "NXB Tre",
@@ -303,7 +303,7 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            PublisherId = 2,
+                            Id = 2,
                             City = "HCM",
                             Country = "VN",
                             PublisherName = "NXB Kim Dong",
@@ -313,40 +313,40 @@ namespace BusinessObject.Migrations
 
             modelBuilder.Entity("BusinessObject.Role", b =>
                 {
-                    b.Property<int>("RoleId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("RoleDesc")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RoleId");
+                    b.HasKey("Id");
 
                     b.ToTable("Roles");
 
                     b.HasData(
                         new
                         {
-                            RoleId = 1,
+                            Id = 1,
                             RoleDesc = "Administrator"
                         },
                         new
                         {
-                            RoleId = 2,
+                            Id = 2,
                             RoleDesc = "User"
                         });
                 });
 
             modelBuilder.Entity("BusinessObject.User", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -382,17 +382,17 @@ namespace BusinessObject.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
-                            UserId = 1,
+                            Id = 1,
                             Email = "user1@email.com",
                             FirstName = "Ngua",
-                            HireDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9175),
+                            HireDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7020),
                             LastName = "Len Troi",
                             MiddleName = "Mat",
                             Password = "abc",
@@ -402,10 +402,10 @@ namespace BusinessObject.Migrations
                         },
                         new
                         {
-                            UserId = 2,
+                            Id = 2,
                             Email = "user2@email.com",
                             FirstName = "Han",
-                            HireDate = new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9187),
+                            HireDate = new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7034),
                             LastName = "Vo Doi",
                             MiddleName = "Doi",
                             Password = "abc",

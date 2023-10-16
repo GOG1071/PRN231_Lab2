@@ -1,8 +1,10 @@
-﻿namespace DataAccess.Repository.Interface;
+﻿using BusinessObject;
+
+namespace DataAccess.Repository.Interface;
 
 using DataAccess.DAO;
 
-public interface IRepository <TModel> where TModel : class
+public interface IRepository <TModel> where TModel : class, IModel
 {
     void Add(TModel entity);
     void Update(TModel entity);

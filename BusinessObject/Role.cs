@@ -3,10 +3,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Role
+public class Role : IModel
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int RoleId { get; set; }
+    public int Id { get; set; }
 
     [Required] public string RoleDesc { get; set; }
 }

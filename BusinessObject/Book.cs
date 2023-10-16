@@ -3,10 +3,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Book
+public class Book : IModel
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int BookId { get; set; }
+    public int Id { get; set; }
 
     [Required] public string   Title         { get; set; }
     [Required] public string   Type          { get; set; }

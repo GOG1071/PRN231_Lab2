@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace BusinessObject.Migrations
 {
     /// <inheritdoc />
-    public partial class EBookStoreDB : Migration
+    public partial class InitialDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace BusinessObject.Migrations
                 name: "Authors",
                 columns: table => new
                 {
-                    AuthorId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -30,7 +30,7 @@ namespace BusinessObject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Authors", x => x.AuthorId);
+                    table.PrimaryKey("PK_Authors", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,7 +51,7 @@ namespace BusinessObject.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    BookId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -65,14 +65,14 @@ namespace BusinessObject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Books", x => x.BookId);
+                    table.PrimaryKey("PK_Books", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Publishers",
                 columns: table => new
                 {
-                    PublisherId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PublisherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     City = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -81,27 +81,27 @@ namespace BusinessObject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Publishers", x => x.PublisherId);
+                    table.PrimaryKey("PK_Publishers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Roles",
                 columns: table => new
                 {
-                    RoleId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleDesc = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Roles", x => x.RoleId);
+                    table.PrimaryKey("PK_Roles", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -115,12 +115,12 @@ namespace BusinessObject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserId);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.InsertData(
                 table: "Authors",
-                columns: new[] { "AuthorId", "Address", "City", "EmailAddress", "FirstName", "LastName", "Phone", "State", "Zip" },
+                columns: new[] { "Id", "Address", "City", "EmailAddress", "FirstName", "LastName", "Phone", "State", "Zip" },
                 values: new object[,]
                 {
                     { 1, "123 Nguyen Trai", "HCM", "abc@email.com", "Nguyen", "Nhat Anh", "123456789", "HCM", "700000" },
@@ -141,19 +141,19 @@ namespace BusinessObject.Migrations
 
             migrationBuilder.InsertData(
                 table: "Books",
-                columns: new[] { "BookId", "Advance", "Notes", "Price", "PublishedDate", "PublisherId", "Royalty", "Title", "Type", "YtdSales" },
+                columns: new[] { "Id", "Advance", "Notes", "Price", "PublishedDate", "PublisherId", "Royalty", "Title", "Type", "YtdSales" },
                 values: new object[,]
                 {
-                    { 1, "256789", "A", 10000m, new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9222), 1, 10m, "Cho Toi Xin Mot Ve Di Tuoi Tho", "A", 10 },
-                    { 2, "14789", "B", 123454m, new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9225), 1, 10m, "Ngua mat len troi, Han doi vo doi", "B", 10 },
-                    { 3, "23789", "C", 10020m, new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9226), 2, 10m, "Cho Toi Xin M Tuoi Tho", "C", 10 },
-                    { 4, "1345679", "D", 10343m, new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9228), 2, 10m, "Ngua mat vo doi", "D", 10 },
-                    { 5, "5789", "E", 10000m, new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9230), 1, 10m, "Cho Toi Xin Tuoi Tho", "E", 10 }
+                    { 1, "256789", "A", 10000m, new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7255), 1, 10m, "Cho Toi Xin Mot Ve Di Tuoi Tho", "A", 10 },
+                    { 2, "14789", "B", 123454m, new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7260), 1, 10m, "Ngua mat len troi, Han doi vo doi", "B", 10 },
+                    { 3, "23789", "C", 10020m, new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7263), 2, 10m, "Cho Toi Xin M Tuoi Tho", "C", 10 },
+                    { 4, "1345679", "D", 10343m, new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7266), 2, 10m, "Ngua mat vo doi", "D", 10 },
+                    { 5, "5789", "E", 10000m, new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7270), 1, 10m, "Cho Toi Xin Tuoi Tho", "E", 10 }
                 });
 
             migrationBuilder.InsertData(
                 table: "Publishers",
-                columns: new[] { "PublisherId", "City", "Country", "PublisherName", "State" },
+                columns: new[] { "Id", "City", "Country", "PublisherName", "State" },
                 values: new object[,]
                 {
                     { 1, "HCM", "VN", "NXB Tre", "HCM" },
@@ -162,7 +162,7 @@ namespace BusinessObject.Migrations
 
             migrationBuilder.InsertData(
                 table: "Roles",
-                columns: new[] { "RoleId", "RoleDesc" },
+                columns: new[] { "Id", "RoleDesc" },
                 values: new object[,]
                 {
                     { 1, "Administrator" },
@@ -171,11 +171,11 @@ namespace BusinessObject.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "UserId", "Email", "FirstName", "HireDate", "LastName", "MiddleName", "Password", "PublisherId", "RoleId", "Source" },
+                columns: new[] { "Id", "Email", "FirstName", "HireDate", "LastName", "MiddleName", "Password", "PublisherId", "RoleId", "Source" },
                 values: new object[,]
                 {
-                    { 1, "user1@email.com", "Ngua", new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9175), "Len Troi", "Mat", "abc", "1", 2, "Web" },
-                    { 2, "user2@email.com", "Han", new DateTime(2023, 10, 15, 12, 4, 59, 747, DateTimeKind.Local).AddTicks(9187), "Vo Doi", "Doi", "abc", "1", 2, "Web" }
+                    { 1, "user1@email.com", "Ngua", new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7020), "Len Troi", "Mat", "abc", "1", 2, "Web" },
+                    { 2, "user2@email.com", "Han", new DateTime(2023, 10, 16, 11, 44, 9, 377, DateTimeKind.Local).AddTicks(7034), "Vo Doi", "Doi", "abc", "1", 2, "Web" }
                 });
         }
 

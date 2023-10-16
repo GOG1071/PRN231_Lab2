@@ -30,7 +30,7 @@ public class PublisherController : ControllerBase
     [HttpPut]
     public ActionResult<Publisher> UpdatePublisher(Publisher publisher)
     {
-        var aut = this._publisherRepository.Get(publisher.PublisherId);
+        var aut = this._publisherRepository.Get(publisher.Id);
         if (aut == null)
         {
             return NotFound();
@@ -42,7 +42,7 @@ public class PublisherController : ControllerBase
     [HttpPost]
     public ActionResult<Publisher> AddPublisher(Publisher publisher)
     {
-        var aut = this._publisherRepository.Get(publisher.PublisherId);
+        var aut = this._publisherRepository.Get(publisher.Id);
         if (aut != null)
         {
             return Conflict();

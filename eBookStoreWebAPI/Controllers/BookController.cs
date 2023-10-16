@@ -29,7 +29,7 @@ public class BookController : ControllerBase
     [HttpPut]
     public ActionResult<Book> Update(Book book)
     {
-        var aut = this._bookRepository.Get(book.BookId);
+        var aut = this._bookRepository.Get(book.Id);
         if (aut == null)
         {
             return NotFound();
@@ -41,7 +41,7 @@ public class BookController : ControllerBase
     [HttpPost]
     public ActionResult<Book> Add(Book book)
     {
-        var aut = this._bookRepository.Get(book.BookId);
+        var aut = this._bookRepository.Get(book.Id);
         if (aut != null)
         {
             return Conflict();

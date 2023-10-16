@@ -12,13 +12,13 @@ public class BookAuthorController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<BookAuthor>> GetBookAuthors()
     {
-        return this._bookAuthorRepository.GetAll();
+        return this._bookAuthorRepository.GetAll().ToList();
     }
     
-    [HttpGet("{id}")]
-    public ActionResult<BookAuthor> GetBookAuthorById(int id)
+    [HttpGet("{Aid}&{Bid}")]
+    public ActionResult<BookAuthor> GetBookAuthorById(int Aid,int Bid)
     {
-        var bookAuthor = this._bookAuthorRepository.Get(id);
+        var bookAuthor = this._bookAuthorRepository.Get(Aid,Bid);
         if (bookAuthor == null)
         {
             return NotFound();
@@ -29,7 +29,7 @@ public class BookAuthorController : ControllerBase
     [HttpPut]
     public ActionResult<BookAuthor> UpdateBookAuthor(BookAuthor bookAuthor)
     {
-        var aut = this._bookAuthorRepository.Get(bookAuthor.BookId);
+        var aut = this._bookAuthorRepository.Get(bookAuthor.AuthorId,bookAuthor.BookId);
         if (aut == null)
         {
             return NotFound();
@@ -41,7 +41,7 @@ public class BookAuthorController : ControllerBase
     [HttpPost]
     public ActionResult<BookAuthor> AddBookAuthor(BookAuthor bookAuthor)
     {
-        var aut = this._bookAuthorRepository.Get(bookAuthor.BookId);
+        var aut = this._bookAuthorRepository.Get(bookAuthor.AuthorId,bookAuthor.BookId);
         if (aut != null)
         {
             return Conflict();
@@ -50,15 +50,15 @@ public class BookAuthorController : ControllerBase
         return this.NoContent();
     }
     
-    [HttpDelete("{id}")]
-    public ActionResult<BookAuthor> DeleteBookAuthor(int id)
+    [HttpDelete("{Aid}&{Bid}")]
+    public ActionResult<BookAuthor> DeleteBookAuthor(int Aid, int Bid)
     {
-        var aut = this._bookAuthorRepository.Get(id);
+        var aut = this._bookAuthorRepository.Get(Aid, Bid);
         if (aut == null)
         {
             return NotFound();
         }
-        this._bookAuthorRepository.Delete(id);
+        this._bookAuthorRepository.Delete(Aid,Bid);
         return NoContent();
     }
 }

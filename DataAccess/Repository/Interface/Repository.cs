@@ -1,8 +1,10 @@
-﻿namespace DataAccess.Repository.Interface;
+﻿using BusinessObject;
+
+namespace DataAccess.Repository.Interface;
 
 using DataAccess.DAO;
 
-public class Repository<TModel, TDAO> : IRepository<TModel> where TModel : class where TDAO : IDAO<TModel>
+public class Repository<TModel, TDAO> : IRepository<TModel> where TModel : class, IModel where TDAO : IDAO<TModel>
 {
     public void         Add(TModel entity)    { TDAO.Add(entity); }
     public void         Update(TModel entity) { TDAO.Update(entity); }

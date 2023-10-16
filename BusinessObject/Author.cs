@@ -3,10 +3,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Author
+public class Author : IModel
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int AuthorId { get; set; }
+    public int Id { get; set; }
 
     [Required] public string FirstName    { get; set; }
     [Required] public string LastName     { get; set; }
@@ -16,5 +16,4 @@ public class Author
     [Required] public string City         { get; set; }
     [Required] public string State        { get; set; }
     [Required] public string Zip          { get; set; }
-
 }

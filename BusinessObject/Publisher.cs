@@ -3,10 +3,10 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class Publisher
+public class Publisher : IModel
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public int PublisherId { get; set; }
+    public int Id { get; set; }
 
     [Required] public string PublisherName { get; set; }
     [Required] public string City          { get; set; }

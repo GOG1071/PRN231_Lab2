@@ -30,7 +30,7 @@ public class UserController : ControllerBase
     [HttpPut]
     public ActionResult<User> UpdateUser(User user)
     {
-        var aut = this._userRepository.Get(user.UserId);
+        var aut = this._userRepository.Get(user.Id);
         if (aut == null)
         {
             return NotFound();
@@ -42,7 +42,7 @@ public class UserController : ControllerBase
     [HttpPost]
     public ActionResult<User> AddUser(User user)
     {
-        var aut = this._userRepository.Get(user.UserId);
+        var aut = this._userRepository.Get(user.Id);
         if (aut != null)
         {
             return Conflict();

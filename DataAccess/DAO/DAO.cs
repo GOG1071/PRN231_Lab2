@@ -2,7 +2,7 @@
 
 using BusinessObject;
 
-public abstract class DAO<T> : IDAO<T> where T : class
+public abstract class DAO<T> : IDAO<T> where T : class, IModel
 {
     public static T Get(int id)
     {
@@ -19,6 +19,41 @@ public abstract class DAO<T> : IDAO<T> where T : class
         }
         return t;
     }
+
+    public static T Get(params object[]? objects)
+    {
+        T t;
+        try
+        {
+            using var context = new EBookStoreDbContext();
+            t = context.Set<T>().Find(objects);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+
+        return t;
+    }
+
+    public static T Get(T t)
+    {
+        T t1;
+        try
+        {
+            using var context = new EBookStoreDbContext();
+            t1 = context.Set<T>().Find(t.Id);
+        }   
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
+
+        return t1;
+    }
+
     public static List<T> GetAll()
     {
         List<T> ts = null;
